@@ -1,0 +1,16 @@
+{
+  "name": "tm-corpus",
+  "version": "1.0.0",
+  "description": "Text mining library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "text",
+    "mining",
+    "corpus"
+  ],
+  "author": "ibnu yahya <anak10thn@gmail.com>",
+  "license": "MIT"
+}
