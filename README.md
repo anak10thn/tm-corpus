@@ -60,4 +60,27 @@ output :
   { word: 'dosa', count: 1 } ]
 ~~~
 
+### Text mining from twitter
+~~~javascript
+var Twitter = require('twitter');
+var tm = require('tm-corpus');
+
+var client = new Twitter({
+  consumer_key: '',
+  consumer_secret: '',
+  access_token_key: '',
+  access_token_secret: ''
+});
+
+var text = [];
+
+var opt = {count:100,q:"ahok"}
+client.get('search/tweets',opt , function(error, tweets, response) {
+   tweets.statuses.forEach(function(data){
+     text.push(data.text);
+   });
+   console.log(tm(text.join(" ")))
+});
+~~~
+
 ![yongleks](https://instagram.fcgk5-1.fna.fbcdn.net/t51.2885-15/e35/14482844_1851702305064394_8554828611654254592_n.jpg)
